@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flavors</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/9a963baf51.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+</head>
+<nav>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <div class="dropdown">
+        <i class="fas fa-bars"></i>
+        <div class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="flavors.html"class="active">Flavors</a>
+            <a href="contact.html">Contacts</a>
+        </div>
+    </div>
+    <a class="links" href="index.html">Home</a>
+    <a class="links" href="about.html">About</a>
+    <a class="links"href="flavors.html"class="active">Flavors</a>
+    <a class="links" href="contact.html">Contacts</a>
+</nav>
+<div class="headerFlavor">
+<h1>Super Duper Ice Cream Shop</h1></br>
+<h2>We have the BEST Flavors!</h2></br>
+</div>
+<body class="flavors">
+<div class="blue">
+    <img id="blueImg" src="flavorImages/icecream1.jpg" alt="Blue Ice Cream"></a>
+    <div id="blue1">
+                <li>Flavor: Blue</li>
+                <li>Cost: $2.99</li>
+                <li>Our most popular Flavor!!</li>
+    </div>
+<div id="blueModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="blueImgPopup" src="flavorImages/icecream1.jpg" alt="Blue Ice Cream">
+    <div id="caption" class="blue2">
+        <p>Blue Ice Cream is our most popular flavor, it's not just a color!! Try it for yourself!</p>
+    </div>
+</div>
+<script>
+    var modal = document.getElementById("blueModal");
+    var img = document.getElementById("blueImg");
+    var modalImg = document.getElementById("blueImgPopup");
+    var captionText = document.getElementById("blue2");
+    img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.caption;
+    }
+
+    var span = document.getElementsByClassName("close")[0];
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+</script>
+</div>
+<div class="chocolate">
+    <img id="chocImg" src="flavorImages/icecream2.jpg" alt="Chocolate Ice Cream"></a>
+    <div id="caption" id="choc1">
+        <li>Flavor: Chocolate</li>
+        <li>Cost: 1.99</li>
+        <li>Our delicious take on the classic Chocolate Flavor!!</li>
+    </div>
+    <div id="chocModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="chocImgPopup" src="flavorImages/icecream2.jpg" alt="Chocolate Ice Cream">
+        <div id="caption" id="choc2">
+            <p>Our Chocolate Ice Cream is unlike any other Chocolate Ice Cream you have ever had!! Handmade everyday, I think you will agree!</p>
+        </div>
+    </div>
+    <script>
+        var modal = document.getElementById("chocModal");
+        var img = document.getElementById("chocImg");
+        var modalImg = document.getElementById("chocImgPopup");
+        var captionText = document.getElementById("choc2");
+        img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.caption;
+        }
+
+        var span = document.getElementsByClassName("close")[1];
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+
+</div>
+
+    <div class="vanilla">
+        <img id="vanImg" src="flavorImages/icecream3.jpg" alt="Vanilla Ice Cream"></a>
+        <div id="caption" id="van1">
+            <li>Flavor: Vanilla</li>
+            <li>Cost: 1.99</li>
+            <li>Our version of the classic Vanilla Flavor!!</li>
+        </div>
+        <div id="vanModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="vanImgPopup" src="flavorImages/icecream3.jpg" alt="Vanilla Ice Cream">
+            <div id="caption" id="van2">
+                <p>Our Vanilla Ice Cream is high quality stuff! Our many toppings pair well with this flavor!!</p>
+            </div>
+        </div>
+        <script>
+            var modal = document.getElementById("vanModal");
+            var img = document.getElementById("vanImg");
+            var modalImg = document.getElementById("vanImgPopup");
+            var captionText = document.getElementById("van2");
+            img.onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.caption;
+            }
+
+            var span = document.getElementsByClassName("close")[2];
+
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+        </script>
+
+    </div>
+</div>
+<div class="theTrio">
+    <img id="trioImg" src="flavorImages/icecream4.jpg" alt="The Trio Ice Cream"></a>
+    <div id="caption" id="trio1">
+        <li>Flavor: The Trio</li>
+        <li>Cost: 3.99</li>
+        <li>The Trio is 3 flavors in 1!!</li>
+    </div>
+    <div id="trioModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="trioImgPopup" src="flavorImages/icecream4.jpg" alt="The Trio Ice Cream">
+        <div id="caption" id="trio2">
+            <p>The Trio speaks for itself. 3 flavors in 1, mix it up, eat them separately or share with others!!</p>
+        </div>
+    </div>
+    <script>
+        var modal = document.getElementById("trioModal");
+        var img = document.getElementById("trioImg");
+        var modalImg = document.getElementById("trioImgPopup");
+        var captionText = document.getElementById("trio2");
+        img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.caption;
+        }
+
+        var span = document.getElementsByClassName("close")[3];
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+
+</div>
+</body>
+
+<footer class="footer">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+    <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+</footer>
+</html>
